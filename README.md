@@ -1,8 +1,8 @@
 # Parallelized TAP-scores Analog Based on Propermab
 
-`propermab` is a Python package for calculating and predicting molecular features and properties of monoclonal antibodies (mAbs).
+This fork introduces a **parallelized** version for computing hydrophobic, negative, and positive patches, as well as Vh-Vl charge asymmetry from antibody PDB structures—analogous to **Therapeutic Antibody Profiler (TAP) scores**, based on Propermab package.
 
-This fork introduces a **parallelized** version for computing hydrophobic, negative, and positive patches, as well as Vh-Vl charge asymmetry from antibody PDB structures—analogous to **Therapeutic Antibody Profiler (TAP) scores**.
+`propermab` (https://github.com/regeneron-mpds/propermab) is a Python package for calculating and predicting molecular features and properties of monoclonal antibodies (mAbs).
 
 This implementation has been tested on **ABodyBuilder3**-generated structures and requires PDB files to have chain names **H** (heavy) and **L** (light). **IMGT format numbering is not required**, as it is handled in-place using the **ImmunoPDB** module from `anarci`.
 
