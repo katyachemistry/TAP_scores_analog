@@ -103,7 +103,7 @@ def run_pdb2pqr(
     ]
     if other_options is not None:
         pdb2pqr_command += shlex.split(other_options)
-    print(' '.join(pdb2pqr_command))
+    # print(' '.join(pdb2pqr_command))
     output_info = subprocess.run(
         pdb2pqr_command, universal_newlines=True,
         stdout=subprocess.PIPE, stderr=subprocess.PIPE
@@ -132,7 +132,7 @@ def run_apbs(apbs_bin, apbs_input, other_options=None):
     apbs_command = [apbs_bin, apbs_input]
     if other_options is not None:
         apbs_command += shlex.split(other_options)
-    print(' '.join(apbs_command))
+    # print(' '.join(apbs_command))
     output_info = subprocess.run(
         apbs_command, universal_newlines=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE
     )
@@ -173,10 +173,13 @@ def run_multivalue(multivalue_bin, vertex_file, apbs_output, output_prefix):
     and the electrostatic potential of a vertex.
 
     """
+    if multivalue_bin is None:
+        multivalue_bin = '/home/kb/APBS-3.0.0.Linux/share/apbs/tools/bin/multivalue' # КОСТЫЛЬ
+        
     multivalue_command = [
         multivalue_bin, vertex_file, apbs_output, f'{output_prefix}_apbs.csv'
     ]
-    print(' '.join(multivalue_command))
+    # print(' '.join(multivalue_command))
     output_info = subprocess.run(
         multivalue_command, universal_newlines=True, stdout=subprocess.PIPE,
         stderr=subprocess.PIPE
@@ -187,6 +190,7 @@ def run_multivalue(multivalue_bin, vertex_file, apbs_output, output_prefix):
     # get electrostatic potential values
     with open(f'{output_prefix}_apbs.csv', 'rt') as in_handle:
         esp_values = [float(line.split(',')[-1]) for line in in_handle]
+    os.remove(f'{output_prefix}_apbs.csv') 
     return esp_values
 
 
@@ -209,10 +213,14 @@ class APBS:
         # use system default if arguments not set explicitly
         if apbs_bin is None:
             self.apbs_bin = defaults.system_config['apbs_binary_path']
+            if self.apbs_bin is None:
+                self.apbs_bin = '/home/kb/APBS-3.0.0.Linux/bin/apbs'
         else:
             self.apbs_bin = apbs_bin
         if pdb2pqr is None:
             self.pdb2pqr = defaults.system_config['pdb2pqr_path']
+            if self.pdb2pqr is None: # КОСТЫЛЬ
+                self.pdb2pqr = "pdb2pqr"
         else:
             self.pdb2pqr = pdb2pqr
         if ld_lib_paths is None:
@@ -244,6 +252,9 @@ class APBS:
 
         """
         # export required libraries file for running APBS
+        if self.ld_lib_paths is None:
+            self.ld_lib_paths = ['/home/kb/miniforge3/envs/readline/lib/'] # КОСТЫЛЬ
+
         os.environ['LD_LIBRARY_PATH'] = ':'.join(
             ['${LD_LIBRARY_PATH}'] + self.ld_lib_paths
         )
@@ -255,7 +266,7 @@ class APBS:
         old_dir = os.getcwd()
         os.chdir(tmp_dir)
 
-        print(f'Doing APBS calculations in a temporary directory: {tmp_dir}')
+        # print(f'Doing APBS calculations in a temporary directory: {tmp_dir}')
 
         pdb_basename = os.path.basename(pdb_file)
         output_prefix = '.'.join(pdb_basename.split('.')[:-1])

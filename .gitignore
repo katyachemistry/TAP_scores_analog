@@ -1,3 +1,5 @@
 # byte-compiled / optimized files
 __pycache__/
 *.py[cod]
+patches_and_asym_parallel/__pycache__/
+default_config.json

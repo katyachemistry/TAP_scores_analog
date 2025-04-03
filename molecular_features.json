@@ -1,0 +1,15 @@
+[
+    {
+        "/home/kb/abodybuilder3_inference/trial_for_calculations/Abagovomab_added_H_1_renum_weird_IMGT.pdb": [
+            {
+                "hyd_patch_area": 810.5743047674496,
+                "pos_patch_area": 422.2517842784555,
+                "neg_patch_area": 608.1799273328052,
+                "hyd_patch_area_cdr": 476.8013598582622,
+                "pos_patch_area_cdr": 214.20168446942782,
+                "neg_patch_area_cdr": 251.92209275301158,
+                "charge_asym": 7.993605777301127e-15
+            }
+        ]
+    }
+]

@@ -1,0 +1,560 @@
+[
+    {
+        "example/Adintrevimab.pdb": [
+            {
+                "hyd_patch_area": 841.9839106874571,
+                "pos_patch_area": 70.63970052021008,
+                "neg_patch_area": 1292.64090672874,
+                "hyd_patch_area_cdr": 458.68174498732157,
+                "pos_patch_area_cdr": 21.44492704515116,
+                "neg_patch_area_cdr": 1119.648454724693,
+                "charge_asym": 5.995204332975845e-15
+            },
+            {
+                "hyd_patch_area": 841.9839106874571,
+                "pos_patch_area": 70.63970052021008,
+                "neg_patch_area": 1292.64090672874,
+                "hyd_patch_area_cdr": 458.68174498732157,
+                "pos_patch_area_cdr": 21.44492704515116,
+                "neg_patch_area_cdr": 1119.648454724693,
+                "charge_asym": 5.995204332975845e-15
+            },
+            {
+                "hyd_patch_area": 841.9839106874571,
+                "pos_patch_area": 70.63970052021008,
+                "neg_patch_area": 1292.64090672874,
+                "hyd_patch_area_cdr": 458.68174498732157,
+                "pos_patch_area_cdr": 21.44492704515116,
+                "neg_patch_area_cdr": 1119.648454724693,
+                "charge_asym": 5.995204332975845e-15
+            }
+        ]
+    },
+    {
+        "example/Adakitug.pdb": [
+            {
+                "hyd_patch_area": 924.2969200744036,
+                "pos_patch_area": 202.5510019207229,
+                "neg_patch_area": 633.3228830081655,
+                "hyd_patch_area_cdr": 457.46078067110807,
+                "pos_patch_area_cdr": 65.88371540794535,
+                "neg_patch_area_cdr": 308.11654498935184,
+                "charge_asym": 2.220446049250313e-16
+            },
+            {
+                "hyd_patch_area": 924.2969200744036,
+                "pos_patch_area": 202.5510019207229,
+                "neg_patch_area": 633.3228830081655,
+                "hyd_patch_area_cdr": 457.46078067110807,
+                "pos_patch_area_cdr": 65.88371540794535,
+                "neg_patch_area_cdr": 308.11654498935184,
+                "charge_asym": 2.220446049250313e-16
+            },
+            {
+                "hyd_patch_area": 924.2969200744036,
+                "pos_patch_area": 202.5510019207229,
+                "neg_patch_area": 633.3228830081655,
+                "hyd_patch_area_cdr": 457.46078067110807,
+                "pos_patch_area_cdr": 65.88371540794535,
+                "neg_patch_area_cdr": 308.11654498935184,
+                "charge_asym": 2.220446049250313e-16
+            }
+        ]
+    },
+    {
+        "example/Actoxumab.pdb": [
+            {
+                "hyd_patch_area": 855.5273877092689,
+                "pos_patch_area": 273.81714136855027,
+                "neg_patch_area": 826.9166101342735,
+                "hyd_patch_area_cdr": 457.6733783533977,
+                "pos_patch_area_cdr": 74.59566559264249,
+                "neg_patch_area_cdr": 567.7791823834851,
+                "charge_asym": -1.9999999999999984
+            },
+            {
+                "hyd_patch_area": 855.5273877092689,
+                "pos_patch_area": 273.81714136855027,
+                "neg_patch_area": 826.9166101342735,
+                "hyd_patch_area_cdr": 457.6733783533977,
+                "pos_patch_area_cdr": 74.59566559264249,
+                "neg_patch_area_cdr": 567.7791823834851,
+                "charge_asym": -1.9999999999999984
+            },
+            {
+                "hyd_patch_area": 855.5273877092689,
+                "pos_patch_area": 273.81714136855027,
+                "neg_patch_area": 826.9166101342735,
+                "hyd_patch_area_cdr": 457.6733783533977,
+                "pos_patch_area_cdr": 74.59566559264249,
+                "neg_patch_area_cdr": 567.7791823834851,
+                "charge_asym": -1.9999999999999984
+            }
+        ]
+    },
+    {
+        "example/Abciximab.pdb": [
+            {
+                "hyd_patch_area": 828.7925316061444,
+                "pos_patch_area": 237.49250346567794,
+                "neg_patch_area": 1107.5693598130476,
+                "hyd_patch_area_cdr": 435.07291066121564,
+                "pos_patch_area_cdr": 139.33665175908595,
+                "neg_patch_area_cdr": 855.2476233710697,
+                "charge_asym": 1.9999999999999958
+            },
+            {
+                "hyd_patch_area": 828.7925316061444,
+                "pos_patch_area": 237.49250346567794,
+                "neg_patch_area": 1107.5693598130476,
+                "hyd_patch_area_cdr": 435.07291066121564,
+                "pos_patch_area_cdr": 139.33665175908595,
+                "neg_patch_area_cdr": 855.2476233710697,
+                "charge_asym": 1.9999999999999958
+            },
+            {
+                "hyd_patch_area": 828.7925316061444,
+                "pos_patch_area": 237.49250346567794,
+                "neg_patch_area": 1107.5693598130476,
+                "hyd_patch_area_cdr": 435.07291066121564,
+                "pos_patch_area_cdr": 139.33665175908595,
+                "neg_patch_area_cdr": 855.2476233710697,
+                "charge_asym": 1.9999999999999958
+            }
+        ]
+    },
+    {
+        "example/Abagovomab copy.pdb": [
+            {
+                "hyd_patch_area": 787.4163006912732,
+                "pos_patch_area": 422.25512497895926,
+                "neg_patch_area": 608.1807132011551,
+                "hyd_patch_area_cdr": 453.6451498301226,
+                "pos_patch_area_cdr": 214.2051422430957,
+                "neg_patch_area_cdr": 251.92498966910628,
+                "charge_asym": 3.000000000000005
+            },
+            {
+                "hyd_patch_area": 787.4163006912732,
+                "pos_patch_area": 422.25512497895926,
+                "neg_patch_area": 608.1807132011551,
+                "hyd_patch_area_cdr": 453.6451498301226,
+                "pos_patch_area_cdr": 214.2051422430957,
+                "neg_patch_area_cdr": 251.92498966910628,
+                "charge_asym": 3.000000000000005
+            },
+            {
+                "hyd_patch_area": 787.4163006912732,
+                "pos_patch_area": 422.25512497895926,
+                "neg_patch_area": 608.1807132011551,
+                "hyd_patch_area_cdr": 453.6451498301226,
+                "pos_patch_area_cdr": 214.2051422430957,
+                "neg_patch_area_cdr": 251.92498966910628,
+                "charge_asym": 3.000000000000005
+            }
+        ]
+    },
+    {
+        "example/Abazistobart.pdb": [
+            {
+                "hyd_patch_area": 901.3309513774669,
+                "pos_patch_area": 305.0035121076231,
+                "neg_patch_area": 536.0832920758905,
+                "hyd_patch_area_cdr": 413.190343395017,
+                "pos_patch_area_cdr": 84.45738152819149,
+                "neg_patch_area_cdr": 277.53662920712134,
+                "charge_asym": 1.0000000000000053
+            },
+            {
+                "hyd_patch_area": 901.3309513774669,
+                "pos_patch_area": 305.0035121076231,
+                "neg_patch_area": 536.0832920758905,
+                "hyd_patch_area_cdr": 413.190343395017,
+                "pos_patch_area_cdr": 84.45738152819149,
+                "neg_patch_area_cdr": 277.53662920712134,
+                "charge_asym": 1.0000000000000053
+            },
+            {
+                "hyd_patch_area": 901.3309513774669,
+                "pos_patch_area": 305.0035121076231,
+                "neg_patch_area": 536.0832920758905,
+                "hyd_patch_area_cdr": 413.190343395017,
+                "pos_patch_area_cdr": 84.45738152819149,
+                "neg_patch_area_cdr": 277.53662920712134,
+                "charge_asym": 1.0000000000000053
+            }
+        ]
+    },
+    {
+        "example/Abrilumab.pdb": [
+            {
+                "hyd_patch_area": 764.017925740093,
+                "pos_patch_area": 285.50908503775145,
+                "neg_patch_area": 1601.3813727763961,
+                "hyd_patch_area_cdr": 302.63226683681575,
+                "pos_patch_area_cdr": 23.42224791619002,
+                "neg_patch_area_cdr": 1211.0396756964637,
+                "charge_asym": -4.9999999999999964
+            },
+            {
+                "hyd_patch_area": 764.017925740093,
+                "pos_patch_area": 285.50908503775145,
+                "neg_patch_area": 1601.3813727763961,
+                "hyd_patch_area_cdr": 302.63226683681575,
+                "pos_patch_area_cdr": 23.42224791619002,
+                "neg_patch_area_cdr": 1211.0396756964637,
+                "charge_asym": -4.9999999999999964
+            },
+            {
+                "hyd_patch_area": 764.017925740093,
+                "pos_patch_area": 285.50908503775145,
+                "neg_patch_area": 1601.3813727763961,
+                "hyd_patch_area_cdr": 302.63226683681575,
+                "pos_patch_area_cdr": 23.42224791619002,
+                "neg_patch_area_cdr": 1211.0396756964637,
+                "charge_asym": -4.9999999999999964
+            }
+        ]
+    },
+    {
+        "example/Acimtamig.pdb": [
+            {
+                "hyd_patch_area": 1038.9397169368258,
+                "pos_patch_area": 216.06387023073486,
+                "neg_patch_area": 782.6460404223459,
+                "hyd_patch_area_cdr": 695.6745157297471,
+                "pos_patch_area_cdr": 90.74357661203831,
+                "neg_patch_area_cdr": 264.97429723955855,
+                "charge_asym": 1.0000000000000044
+            },
+            {
+                "hyd_patch_area": 1038.9397169368258,
+                "pos_patch_area": 216.06387023073486,
+                "neg_patch_area": 782.6460404223459,
+                "hyd_patch_area_cdr": 695.6745157297471,
+                "pos_patch_area_cdr": 90.74357661203831,
+                "neg_patch_area_cdr": 264.97429723955855,
+                "charge_asym": 1.0000000000000044
+            },
+            {
+                "hyd_patch_area": 1038.9397169368258,
+                "pos_patch_area": 216.06387023073486,
+                "neg_patch_area": 782.6460404223459,
+                "hyd_patch_area_cdr": 695.6745157297471,
+                "pos_patch_area_cdr": 90.74357661203831,
+                "neg_patch_area_cdr": 264.97429723955855,
+                "charge_asym": 1.0000000000000044
+            }
+        ]
+    },
+    {
+        "example/Abituzumab.pdb": [
+            {
+                "hyd_patch_area": 768.7681847833277,
+                "pos_patch_area": 425.3652032789349,
+                "neg_patch_area": 931.561103840581,
+                "hyd_patch_area_cdr": 466.84293726824035,
+                "pos_patch_area_cdr": 285.79041426542307,
+                "neg_patch_area_cdr": 544.7046943626556,
+                "charge_asym": -2.999999999999993
+            },
+            {
+                "hyd_patch_area": 768.7681847833277,
+                "pos_patch_area": 425.3652032789349,
+                "neg_patch_area": 931.561103840581,
+                "hyd_patch_area_cdr": 466.84293726824035,
+                "pos_patch_area_cdr": 285.79041426542307,
+                "neg_patch_area_cdr": 544.7046943626556,
+                "charge_asym": -2.999999999999993
+            },
+            {
+                "hyd_patch_area": 768.7681847833277,
+                "pos_patch_area": 425.3652032789349,
+                "neg_patch_area": 931.561103840581,
+                "hyd_patch_area_cdr": 466.84293726824035,
+                "pos_patch_area_cdr": 285.79041426542307,
+                "neg_patch_area_cdr": 544.7046943626556,
+                "charge_asym": -2.999999999999993
+            }
+        ]
+    },
+    {
+        "example/Adebrelimab.pdb": [
+            {
+                "hyd_patch_area": 682.6144065899902,
+                "pos_patch_area": 227.83381309807163,
+                "neg_patch_area": 950.2852983374479,
+                "hyd_patch_area_cdr": 403.41376911611343,
+                "pos_patch_area_cdr": 48.12644385640833,
+                "neg_patch_area_cdr": 572.9209620976711,
+                "charge_asym": 6.000000000000001
+            },
+            {
+                "hyd_patch_area": 682.6144065899902,
+                "pos_patch_area": 227.83381309807163,
+                "neg_patch_area": 950.2852983374479,
+                "hyd_patch_area_cdr": 403.41376911611343,
+                "pos_patch_area_cdr": 48.12644385640833,
+                "neg_patch_area_cdr": 572.9209620976711,
+                "charge_asym": 6.000000000000001
+            },
+            {
+                "hyd_patch_area": 682.6144065899902,
+                "pos_patch_area": 227.83381309807163,
+                "neg_patch_area": 950.2852983374479,
+                "hyd_patch_area_cdr": 403.41376911611343,
+                "pos_patch_area_cdr": 48.12644385640833,
+                "neg_patch_area_cdr": 572.9209620976711,
+                "charge_asym": 6.000000000000001
+            }
+        ]
+    },
+    {
+        "example/Acasunlimab.pdb": [
+            {
+                "hyd_patch_area": 751.508653222042,
+                "pos_patch_area": 263.45000426387764,
+                "neg_patch_area": 1079.6934169035624,
+                "hyd_patch_area_cdr": 380.3352944082955,
+                "pos_patch_area_cdr": 213.99522648406858,
+                "neg_patch_area_cdr": 468.37358422954503,
+                "charge_asym": 4.000000000000001
+            },
+            {
+                "hyd_patch_area": 751.508653222042,
+                "pos_patch_area": 263.45000426387764,
+                "neg_patch_area": 1079.6934169035624,
+                "hyd_patch_area_cdr": 380.3352944082955,
+                "pos_patch_area_cdr": 213.99522648406858,
+                "neg_patch_area_cdr": 468.37358422954503,
+                "charge_asym": 4.000000000000001
+            },
+            {
+                "hyd_patch_area": 751.508653222042,
+                "pos_patch_area": 263.45000426387764,
+                "neg_patch_area": 1079.6934169035624,
+                "hyd_patch_area_cdr": 380.3352944082955,
+                "pos_patch_area_cdr": 213.99522648406858,
+                "neg_patch_area_cdr": 468.37358422954503,
+                "charge_asym": 4.000000000000001
+            }
+        ]
+    },
+    {
+        "example/Abagovomab.pdb": [
+            {
+                "hyd_patch_area": 796.0057957025864,
+                "pos_patch_area": 497.3379012594584,
+                "neg_patch_area": 600.611349056798,
+                "hyd_patch_area_cdr": 471.5260152903285,
+                "pos_patch_area_cdr": 296.6543013052374,
+                "neg_patch_area_cdr": 254.04593507977413,
+                "charge_asym": 3.000000000000005
+            },
+            {
+                "hyd_patch_area": 796.0057957025864,
+                "pos_patch_area": 497.3379012594584,
+                "neg_patch_area": 600.611349056798,
+                "hyd_patch_area_cdr": 471.5260152903285,
+                "pos_patch_area_cdr": 296.6543013052374,
+                "neg_patch_area_cdr": 254.04593507977413,
+                "charge_asym": 3.000000000000005
+            },
+            {
+                "hyd_patch_area": 796.0057957025864,
+                "pos_patch_area": 497.3379012594584,
+                "neg_patch_area": 600.611349056798,
+                "hyd_patch_area_cdr": 471.5260152903285,
+                "pos_patch_area_cdr": 296.6543013052374,
+                "neg_patch_area_cdr": 254.04593507977413,
+                "charge_asym": 3.000000000000005
+            }
+        ]
+    },
+    {
+        "example/Adalimumab.pdb": [
+            {
+                "hyd_patch_area": 875.8353884068131,
+                "pos_patch_area": 432.74527115315556,
+                "neg_patch_area": 658.0844904654161,
+                "hyd_patch_area_cdr": 498.4896362419628,
+                "pos_patch_area_cdr": 199.8061879851869,
+                "neg_patch_area_cdr": 429.0376384977746,
+                "charge_asym": -7.999999999999998
+            },
+            {
+                "hyd_patch_area": 875.8353884068131,
+                "pos_patch_area": 432.74527115315556,
+                "neg_patch_area": 658.0844904654161,
+                "hyd_patch_area_cdr": 498.4896362419628,
+                "pos_patch_area_cdr": 199.8061879851869,
+                "neg_patch_area_cdr": 429.0376384977746,
+                "charge_asym": -7.999999999999998
+            },
+            {
+                "hyd_patch_area": 875.8353884068131,
+                "pos_patch_area": 432.74527115315556,
+                "neg_patch_area": 658.0844904654161,
+                "hyd_patch_area_cdr": 498.4896362419628,
+                "pos_patch_area_cdr": 199.8061879851869,
+                "neg_patch_area_cdr": 429.0376384977746,
+                "charge_asym": -7.999999999999998
+            }
+        ]
+    },
+    {
+        "example/Acapatamab.pdb": [
+            {
+                "hyd_patch_area": 1129.081501544124,
+                "pos_patch_area": 253.9502165763424,
+                "neg_patch_area": 1145.7541454461239,
+                "hyd_patch_area_cdr": 773.2495055134774,
+                "pos_patch_area_cdr": 59.71270465257198,
+                "neg_patch_area_cdr": 765.9875497238645,
+                "charge_asym": 3.0000000000000004
+            },
+            {
+                "hyd_patch_area": 1129.081501544124,
+                "pos_patch_area": 253.9502165763424,
+                "neg_patch_area": 1145.7541454461239,
+                "hyd_patch_area_cdr": 773.2495055134774,
+                "pos_patch_area_cdr": 59.71270465257198,
+                "neg_patch_area_cdr": 765.9875497238645,
+                "charge_asym": 3.0000000000000004
+            },
+            {
+                "hyd_patch_area": 1129.081501544124,
+                "pos_patch_area": 253.9502165763424,
+                "neg_patch_area": 1145.7541454461239,
+                "hyd_patch_area_cdr": 773.2495055134774,
+                "pos_patch_area_cdr": 59.71270465257198,
+                "neg_patch_area_cdr": 765.9875497238645,
+                "charge_asym": 3.0000000000000004
+            }
+        ]
+    },
+    {
+        "example/Abelacimab.pdb": [
+            {
+                "hyd_patch_area": 1023.5022579060841,
+                "pos_patch_area": 255.45309359656085,
+                "neg_patch_area": 995.5178096654856,
+                "hyd_patch_area_cdr": 604.2334020904577,
+                "pos_patch_area_cdr": 186.11429572820543,
+                "neg_patch_area_cdr": 520.598413900288,
+                "charge_asym": 1.000000000000005
+            },
+            {
+                "hyd_patch_area": 1023.5022579060841,
+                "pos_patch_area": 255.45309359656085,
+                "neg_patch_area": 995.5178096654856,
+                "hyd_patch_area_cdr": 604.2334020904577,
+                "pos_patch_area_cdr": 186.11429572820543,
+                "neg_patch_area_cdr": 520.598413900288,
+                "charge_asym": 1.000000000000005
+            },
+            {
+                "hyd_patch_area": 1023.5022579060841,
+                "pos_patch_area": 255.45309359656085,
+                "neg_patch_area": 995.5178096654856,
+                "hyd_patch_area_cdr": 604.2334020904577,
+                "pos_patch_area_cdr": 186.11429572820543,
+                "neg_patch_area_cdr": 520.598413900288,
+                "charge_asym": 1.000000000000005
+            }
+        ]
+    },
+    {
+        "example/Acrixolimab.pdb": [
+            {
+                "hyd_patch_area": 1010.2876619420044,
+                "pos_patch_area": 209.27998731840032,
+                "neg_patch_area": 1259.6656894070286,
+                "hyd_patch_area_cdr": 555.223568605781,
+                "pos_patch_area_cdr": 62.21380310948422,
+                "neg_patch_area_cdr": 840.2884775874851,
+                "charge_asym": 8.999999999999996
+            },
+            {
+                "hyd_patch_area": 1010.2876619420044,
+                "pos_patch_area": 209.27998731840032,
+                "neg_patch_area": 1259.6656894070286,
+                "hyd_patch_area_cdr": 555.223568605781,
+                "pos_patch_area_cdr": 62.21380310948422,
+                "neg_patch_area_cdr": 840.2884775874851,
+                "charge_asym": 8.999999999999996
+            },
+            {
+                "hyd_patch_area": 1010.2876619420044,
+                "pos_patch_area": 209.27998731840032,
+                "neg_patch_area": 1259.6656894070286,
+                "hyd_patch_area_cdr": 555.223568605781,
+                "pos_patch_area_cdr": 62.21380310948422,
+                "neg_patch_area_cdr": 840.2884775874851,
+                "charge_asym": 8.999999999999996
+            }
+        ]
+    },
+    {
+        "example/Adecatumumab.pdb": [
+            {
+                "hyd_patch_area": 969.3012886330298,
+                "pos_patch_area": 240.00005641017486,
+                "neg_patch_area": 1206.073894526091,
+                "hyd_patch_area_cdr": 694.1004156547526,
+                "pos_patch_area_cdr": 68.69611833527242,
+                "neg_patch_area_cdr": 831.9514880324308,
+                "charge_asym": 2.9999999999999996
+            },
+            {
+                "hyd_patch_area": 969.3012886330298,
+                "pos_patch_area": 240.00005641017486,
+                "neg_patch_area": 1206.073894526091,
+                "hyd_patch_area_cdr": 694.1004156547526,
+                "pos_patch_area_cdr": 68.69611833527242,
+                "neg_patch_area_cdr": 831.9514880324308,
+                "charge_asym": 2.9999999999999996
+            },
+            {
+                "hyd_patch_area": 969.3012886330298,
+                "pos_patch_area": 240.00005641017486,
+                "neg_patch_area": 1206.073894526091,
+                "hyd_patch_area_cdr": 694.1004156547526,
+                "pos_patch_area_cdr": 68.69611833527242,
+                "neg_patch_area_cdr": 831.9514880324308,
+                "charge_asym": 2.9999999999999996
+            }
+        ]
+    },
+    {
+        "example/Abiprubart.pdb": [
+            {
+                "hyd_patch_area": 679.5360758059817,
+                "pos_patch_area": 660.8226229284493,
+                "neg_patch_area": 570.4003374508477,
+                "hyd_patch_area_cdr": 193.64366262700244,
+                "pos_patch_area_cdr": 399.02949193249844,
+                "neg_patch_area_cdr": 233.09412532216535,
+                "charge_asym": 6.000000000000002
+            },
+            {
+                "hyd_patch_area": 679.5360758059817,
+                "pos_patch_area": 660.8226229284493,
+                "neg_patch_area": 570.4003374508477,
+                "hyd_patch_area_cdr": 193.64366262700244,
+                "pos_patch_area_cdr": 399.02949193249844,
+                "neg_patch_area_cdr": 233.09412532216535,
+                "charge_asym": 6.000000000000002
+            },
+            {
+                "hyd_patch_area": 679.5360758059817,
+                "pos_patch_area": 660.8226229284493,
+                "neg_patch_area": 570.4003374508477,
+                "hyd_patch_area_cdr": 193.64366262700244,
+                "pos_patch_area_cdr": 399.02949193249844,
+                "neg_patch_area_cdr": 233.09412532216535,
+                "charge_asym": 6.000000000000002
+            }
+        ]
+    }
+]

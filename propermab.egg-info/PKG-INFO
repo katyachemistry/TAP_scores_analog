@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: propermab
+Version: 0.1.0
+Summary: Tools for calculating molecular features of proteins with a focus on mAbs.
+Author: Regeneron Pharmaceuticals
+License-File: LICENSE.md
+Requires-Dist: immunebuilder<=0.0.8,>=0.0.5
+Requires-Dist: freesasa==2.1.0
+Requires-Dist: open3d
+Requires-Dist: numba>=0.50
+Requires-Dist: matplotlib>=3.5
+Requires-Dist: seaborn>=0.11
+Requires-Dist: py3dmol
+Requires-Dist: biopython<=1.79,>=1.76
+Requires-Dist: scipy>=1.6
+Requires-Dist: plyfile
+Requires-Dist: markupsafe==2.0.1
+Requires-Dist: werkzeug==2.0.3
+Requires-Dist: meshio
+Requires-Dist: fair-esm
+Requires-Dist: antiberty
+Requires-Dist: pdb2pqr

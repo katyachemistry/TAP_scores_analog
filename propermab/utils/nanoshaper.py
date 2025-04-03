@@ -108,7 +108,7 @@ def run_pdb_to_xyzr(
         'python', pdb_to_xyzr, '--pdb-file', pdb_file, '--ff-file', ff_file,
         '--output-prefix', output_prefix
     ]
-    print(' '.join(command))
+    # print(' '.join(command))
     output_info = subprocess.run(
         command, universal_newlines=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE
     )
@@ -144,7 +144,7 @@ def run_nanoshaper(
         command = ['bash', nanoshaper, config_file]
     else:
         command = [nanoshaper, config_file]
-    print(' '.join(command))
+    # print(' '.join(command))
     output_info = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     # print error messages if any
     print(output_info.stderr)
@@ -177,6 +177,8 @@ class NanoShaper:
         # use system default if arguments not set explicitly
         if nanoshaper_bin is None:
             self.nanoshaper_bin = defaults.system_config['nanoshaper_binary_path']
+            if self.nanoshaper_bin is None:
+                self.nanoshaper_bin = '/home/kb/APBS-3.0.0.Linux/bin/NanoShaper' #КОСТЫЛЬ
         else:
             self.nanoshaper_bin = nanoshaper_bin
         self.nanoshaper_conf = nanoshaper_conf
@@ -187,7 +189,9 @@ class NanoShaper:
         else:
             self.pdb_to_xyzr = pdb_to_xyzr
         if atom_radii_file is None:
-            self.atom_radii_file = defaults.system_config['atom_radii_file']
+            self.atom_radii_file = defaults.system_config['atom_radii_file'] 
+            if self.atom_radii_file is None: # КОСТЫЛЬ
+                self.atom_radii_file = '/home/kb/propermab/amber.siz'
         else:
             self.atom_radii_file = atom_radii_file
         self.grid_scale = grid_scale
@@ -225,7 +229,7 @@ class NanoShaper:
         old_dir = os.getcwd()
         os.chdir(tmp_dir)
 
-        print(f'Doing calculations in a temporary directory: {tmp_dir}')
+        # print(f'Doing calculations in a temporary directory: {tmp_dir}')
 
         # run pdb_to_xyzr.py
         run_pdb_to_xyzr(pdb_file, self.pdb_to_xyzr, self.atom_radii_file)

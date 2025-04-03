@@ -1,0 +1,16 @@
+immunebuilder<=0.0.8,>=0.0.5
+freesasa==2.1.0
+open3d
+numba>=0.50
+matplotlib>=3.5
+seaborn>=0.11
+py3dmol
+biopython<=1.79,>=1.76
+scipy>=1.6
+plyfile
+markupsafe==2.0.1
+werkzeug==2.0.3
+meshio
+fair-esm
+antiberty
+pdb2pqr

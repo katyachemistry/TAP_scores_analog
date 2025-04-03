@@ -211,6 +211,7 @@ def calculate_patch_features(pdb_file: str, tmp_dir: str='/tmp/') -> dict:
             mab_surface.vertices[u - 1] for u in cdr_vertices
     ])
 
+
     hyd_patches = mab_surface.find_patches_dbscan(
         prop='hyd', prop_cutoff=0.04, eps=2.0, min_samples=5,
         area_cutoff=40.
@@ -231,7 +232,7 @@ def calculate_patch_features(pdb_file: str, tmp_dir: str='/tmp/') -> dict:
         surface_patch = surface.SurfacePatch(patch_vertices, patch_faces)
         surface_patch.vertex_coords = patch_vertex_coords
         if surface_patch.is_near_cdr_kd_tree(cdr_coords_dict, dist_cutoff=5.0):
-            print('Found a patch near CDR with area:', hyd_patch_area)
+            # print('Found a patch near CDR with area:', hyd_patch_area)
             total_hyd_area_cdr += hyd_patch_area
 
     pos_patches = mab_surface.find_patches_dbscan(
@@ -277,7 +278,7 @@ def calculate_patch_features(pdb_file: str, tmp_dir: str='/tmp/') -> dict:
             total_neg_area_cdr += neg_patch_area
 
     # compute the Heiden score
-    heiden_score = mab_surface.heiden_score() 
+    # heiden_score = mab_surface.heiden_score() 
 
     # create a dataframe to write the data in tabular format    
     patch_features = {
@@ -287,7 +288,7 @@ def calculate_patch_features(pdb_file: str, tmp_dir: str='/tmp/') -> dict:
         'hyd_patch_area_cdr': total_hyd_area_cdr,
         'pos_patch_area_cdr': total_pos_area_cdr,
         'neg_patch_area_cdr': total_neg_area_cdr,
-        'heiden_score': heiden_score,
+        # 'heiden_score': heiden_score,
     }
     return patch_features
 

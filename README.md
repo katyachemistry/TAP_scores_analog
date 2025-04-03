@@ -1,101 +1,103 @@
-# propermab
+# Parallelized TAP-scores Analog Based on Propermab
 
 `propermab` is a Python package for calculating and predicting molecular features and properties of monoclonal antibodies (mAbs).
 
+This fork introduces a **parallelized** version for computing hydrophobic, negative, and positive patches, as well as Vh-Vl charge asymmetry from antibody PDB structures—analogous to **Therapeutic Antibody Profiler (TAP) scores**.
 
+This implementation has been tested on **ABodyBuilder3**-generated structures and requires PDB files to have chain names **H** (heavy) and **L** (light). **IMGT format numbering is not required**, as it is handled in-place using the **ImmunoPDB** module from `anarci`.
+
+---
 ## Installation (Linux)
 
-First set up a conda environment by running the following commands on the terminal
+Follow the installation instructions from the original `propermab` repository:
+
+### 1. Set up a Conda environment
 ```bash
-git clone https://github.com/regeneron-mpds/propermab.git
 conda env create -f propermab/conda_env.yml
 conda activate propermab
 ```
-Now install the `propermab` package with
+
+### 2. Install `propermab`
 ```bash
 pip install -e propermab/
 ```
 
-### APBS
-The APBS tool v3.0.0 is used by `propermab` to calculate electrostatic potentials. Download the tool and unzip it to a directory of your choice.
+---
+## APBS Installation
+The **Adaptive Poisson-Boltzmann Solver (APBS) v3.0.0** is used by `propermab` to calculate electrostatic potentials. Download and extract it:
 ```bash
 wget https://github.com/Electrostatics/apbs/releases/download/v3.0.0/APBS-3.0.0_Linux.zip -O apbs.zip
 unzip apbs.zip
 ```
-Record the path to this directory as it will be used in the next step. 
+Record the installation path for use in the configuration step.
 
-### Configuration
-Edit the `default_config.json` file to specify the path for each of the entries in the file
-```python
+---
+## Configuration
+**Rename** the default_config_copy.json to **default_config.json** and edit it to specify the correct paths:
+```json
 {
-    "hmmer_binary_path" : "",
-    "nanoshaper_binary_path" : "/ABPS_PATH/APBS-3.0.0.Linux/bin/NanoShaper",
-    "apbs_binary_path" : "/ABPS_PATH/APBS-3.0.0.Linux/bin/apbs",
-    "pdb2pqr_path" : "pdb2pqr",
-    "multivalue_binary_path" : "/ABPS_PATH/APBS-3.0.0.Linux/share/apbs/tools/bin/multivalue",
-    "atom_radii_file" : "",
-    "apbs_ld_library_paths" : ["LIB_PATH", "/ABPS_PATH/APBS-3.0.0.Linux/lib/"]
+    "hmmer_binary_path": "",
+    "nanoshaper_binary_path": "/APBS_PATH/APBS-3.0.0.Linux/bin/NanoShaper",
+    "apbs_binary_path": "/APBS_PATH/APBS-3.0.0.Linux/bin/apbs",
+    "pdb2pqr_path": "pdb2pqr",
+    "multivalue_binary_path": "/APBS_PATH/APBS-3.0.0.Linux/share/apbs/tools/bin/multivalue",
+    "atom_radii_file": "",
+    "apbs_ld_library_paths": ["LIB_PATH", "/APBS_PATH/APBS-3.0.0.Linux/lib/"]
 }
 ```
 
-You can find the value of `hmmer_binary_path` by issuing the following command on your terminal
-```bash
-dirname $(which hmmscan)
-```
+### Finding Required Paths
+- **`hmmer_binary_path`**: Run the following command to find the correct path:
+  ```bash
+  dirname $(which hmmscan)
+  ```
+- **`atom_radii_file`**: This should point to `amber.siz`, found in the `pdb2xyzr.zip` archive, available at: [Electrostatics Zone](https://electrostaticszone.eu/downloads/scripts-and-utilities.html). It is also included in this repo. 
 
-The value of `atom_radii_file` should point to a file named `amber.siz`. This file is needed to run NanoShaper and can be obtained from the pdb2xyzr.zip file available at (https://electrostaticszone.eu/downloads/scripts-and-utilities.html).
-
-To get the value for LIB_PATH, first create a separate conda environment to install the `readline 7.0` package.
+### Setting Up `LIB_PATH`
+To determine the correct `LIB_PATH`, install `readline 7.0` in a separate Conda environment:
 ```bash
 conda deactivate
 conda env create --name readline python=3.8
+conda activate readline
 conda install readline=7.0
 ```
-This may sound a bit involved, but it is necessary as the APBS tool specifically requires the readline.so.7 library file. `readline 7.0` can't be installed from within the propermab conda environment because that would result in too many conflicts. With that being said, once the readline package is installed, the value for LIB_PATH can be found by
+Find the path by running:
 ```bash
 echo ${CONDA_PREFIX}/lib/
 ```
-Finally, be sure to replace APBS_PATH with the actual path to the directory where the APBS tool was unzipped in the previous step.
+Replace `APBS_PATH` in `default_config.json` with your actual APBS installation directory.
 
-Now deactivate the readline environment and reactivate the propermab environment.
-
-## Example
-### Using `propermab` Python API
-You can calculate the molecular features directly from a structure PDB file. Note that this assumes that the residues in PDB file are IMGT numbered and that the heavy chain is named H and the light chain is named L.
-```python
-from propermab import defaults
-from propermab.features import feature_utils
-
-defaults.system_config.update_from_json('./default_config.json')
-
-mol_feature = feature_utils.calculate_features_from_pdb('./tests/pembrolizumab_ib.pdb')
-```
-Or you can provide a pair of heavy and light chain sequences, `propermab` then calls the `ABodyBuilder2` model to predict the structure, which will be used as the input for feature calculation.
-```python
-from propermab import defaults
-from propermab.features import feature_utils
-
-defaults.system_config.update_from_json('./default_config.json')
-
-heavy_seq = 'HEAVY_SEQ'
-light_seq = 'LIGHT_SEQ'
-mol_features = feature_utils.get_all_mol_features(heavy_seq, light_seq, num_runs=1)
-```
-Be sure to replace HEAVY_SEQ and LIGHT_SEQ with the actual sequences. Different runs of `ABodyBuilder2` can result in some difference in sidechain conformations due to the relaxation step in `ABodyBuilder2`. This in turn can affect values of some of the molecular features `propermab` calculates. If the average feature value across multiple runs is desired, one can increase `num_runs`. `get_all_mol_features()` returns a Python dictionary in which the keys are feature names and the values are the corresponding lists of feature values from multiple runs.
-
-The following code demonstrates how to calculate the set of sequence-based features, assuming that the sequences are for the Fv domains, the isotype is IgG1, and the type of the light chain is lambda.
-```python
-from propermab import defaults
-from propermab.features import feature_utils
-
-defaults.system_config.update_from_json('./default_config.json')
-
-heavy_seq = 'HEAVY_SEQ'
-light_seq = 'LIGHT_SEQ'
-seq_features = feature_utils.get_all_seq_features(
-    heavy_seq, light_seq, is_fv=True, isotype='igg1', lc_type='lambda'
-)
+### Final Steps
+Deactivate the `readline` environment, reactivate the `propermab` environment, and install `ray` for parallel execution:
+```bash
+conda deactivate
+conda activate propermab
+pip install ray==2.10.0
 ```
 
-## Third-party software
-`propermab` requires separate installation of third party software which may carry their own license requirements, and should be reviewed by the user prior to installation and use
+---
+## Example Usage
+Navigate to the `patches_and_asym_parallel` directory and run an example script:
+```bash
+python patches_fv_asym_calc.py example/ --repeats 3 --wait --output molecular_features_example.json --pH 7.5
+```
+
+### Arguments:
+- **`--repeats`**: Number of repeats for each structure. Outputs may vary due to randomness in hydrogen addition and minimization.
+- **`--wait`**: Uses `ray.wait()` to process tasks incrementally.
+- **`--pH`**: Specifies the pH for hydrogen addition.
+
+The PDB file should have:
+- **Heavy chain** named as **H**
+- **Light chain** named as **L**
+
+---
+## Third-party Software Dependencies
+`propermab` relies on third-party software that must be installed separately. These dependencies may have their own license requirements, which users should review before installation and usage.
+
+---
+### Notes
+- Ensure all paths are correctly configured in `default_config.json` before running calculations.
+- `ray` enables efficient parallel execution for large-scale computations.
+
+---
